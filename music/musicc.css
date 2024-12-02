@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+.music-player {
+  text-align: center;
+  background: #947625;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background: #fa0000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+input[type="range"] {
+  width: 80%;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#current-time, #duration {
+  font-size: 14px;
+}
+.img img{
+height: 300px;
+width: 300px;
+border-radius: 50%;
+}

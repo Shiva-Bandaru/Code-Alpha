@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurukshetra</title>
+   <div class="maha"> <h1>MAHABHARATHAM</h1>
+<h4>Gallery</h4></div>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.maha{
+    text-align: center;
+    border: #333;
+    background-size: auto;
+    border: solid black;
+    
+}
+
+.filters {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.filter-btn {
+   
+    text-align: end;
+    background-color: #333;
+    color: white;
+    padding: 10px 40px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    row-gap: 40px;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ff5733;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+    padding: 0 20px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    border-color: #333;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+#caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff5733;
+}
+
+.gallery-item img {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nature { background-color: #81c784; }
+.architecture { background-color: #64b5f6; }
+.people { background-color: #ffb74d; }
+
+    </style>
+</head>
+<body>
+
+    <div class="filters">
+        <button class="filter-btn" data-filter="all">kurukshetra</button><br>
+        <button class="filter-btn" data-filter="nature">krishna</button><br>
+        <button class="filter-btn" data-filter="architecture">arjuna</button><br>
+        <button class="filter-btn" data-filter="people">karna</button><br>
+        <button class="filter-btn" data-filter="people">bheeshma</button><br>
+        <button class="filter-btn" data-filter="people">chekravuham</button><br>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item nature">
+            <img src="/kurukshetra.jpeg" alt="" class="gallery-image">
+        </div>
+        <div class="gallery-item architecture">
+            <img src="/krishna lord.jpg" alt="Architecture 1" class="gallery-image">
+        </div>
+        <div class="gallery-item people">
+            <img src="/arjuna.jpg" alt="People 1" class="gallery-image">
+        </div>
+        <div class="gallery-item nature">
+            <img src="/karna.jpeg" alt="Nature 2" class="gallery-image">
+        </div>
+        <div class="gallery-item architecture">
+            <img src="/bheeshma.jpeg" alt="Architecture 2" class="gallery-image">
+        </div>
+        <div class="gallery-item people">
+            <img src="/chekra.jpg" alt="People 2" class="gallery-image">
+            
+        </div>
+        <div class="gallery-item people">
+            <img src="/map.jpeg" alt="People 2" class="gallery-image">
+            
+        </div>
+        <div class="gallery-item people">
+            <img src="/krishna2.jpeg" alt="People 2" class="gallery-image">
+            
+        </div>
+        <div class="gallery-item people">
+            <img src="/ka.jpg" alt="People 2" class="gallery-image">
+            
+        </div>
+        <div class="gallery-item people">
+            <img src="/karna1.jpg" alt="People 2" class="gallery-image">
+            
+        </div>
+        <div class="gallery-item people">
+            <img src="/bheeshma1.jpg" alt="People 2" class="gallery-image">
+            
+        </div>
+        <div class="gallery-item people">
+            <img src="last.jpg" alt="People 2" class="gallery-image">
+            
+        </div>
+    </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/krishnaarjunabg.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center; 
+            color: #000; 
+        }
+        .maha {
+            text-align: center;
+            border: solid black;
+            background-color: rgba(255, 255, 255, 0.8); 
+        }
+        </style>
+        
+</body>
+</html>
